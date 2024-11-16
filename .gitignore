@@ -1,4 +1,7 @@
 content/
 
+saliency_maps/*
+models/*
+
 .venv
-.env
+.env*

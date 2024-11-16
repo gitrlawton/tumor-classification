@@ -90,3 +90,46 @@ After adjusting the weights, the same MRI scan is shown, producing a list of new
 probabilities for each class. This process of predictions, loss calculation and
 weight adjustment happens repeatedly during training, gradually improving the
 model's ability to correctly identify different types of brain tumors.
+
+Convolutional Neural Network - a type of deep learning model commonly used for
+image classification tasks. They use a mathematical operation called convolution
+in order to analyze patterns in the image. The Xception model was one such example of this type of model (36 layers).
+
+Can we train a smaller model with less layers to achieve a similar level of accuracy?
+Training a smaller a model would be less expensive to deploy in a real-world setting
+because it would require less memory and computing power, meaning it can run on cheaper hardware.
+
+Differences between the Xception model and the smaller model we're going to train:
+
+Xception Model:
+
+- 36 convolutional layers and 21 million parameters
+- 99% accuracy
+- Better for batch processing (analyzing multiple images at once), but comes with
+  higher latency (it takes longer for results), making it more suitable for research
+  labs or hospitals with higher-end computing resources.
+- Recommended 16 GB of memory
+
+Custom CNN Model:
+
+- 4 convolutional layers and 4.7 million parameters
+- Goal: Achieve 90%+ accuracy
+- Low-latency, making it suitable for real-time applications and immediate diagnosis
+- Available for hospitals with lower-end computing resources.
+- Only needs 4-8 GB of memory
+
+Saliency Map
+
+Allow us to see what areas of the image the model is looking when making its prediction, which help us understand what to look for in the MRI scan.
+Highlights the region of the image the model is focused on with bright tones.
+
+Google 1.5 Flash
+
+Multi-modal app capable of reasoning across images and text.
+Feed in the saliency app and the prediction of our model to generate an explanation.
+
+Wrapping up:
+
+Created two deep-learning models and a streamlit app that allows a user to upload an
+MRI scan to be classified by one of the models. An explanation of the classification
+prediction is generated using Gemini 1.5 Flash.
