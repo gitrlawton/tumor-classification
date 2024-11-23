@@ -223,9 +223,9 @@ if uploaded_file is not None:
     # Create two columns, one to display the original image, and another for the
     # saliency map.
     with col1:
-        st.image(uploaded_file, caption='Uploaded Image', use_column_width=True)
+        st.image(uploaded_file, caption='Uploaded Image', use_container_width=True)
     with col2:
-        st.image(saliency_map, caption='Saliency Map', use_column_width=True)
+        st.image(saliency_map, caption='Saliency Map', use_container_width=True)
     
     ##---- GENERATE AND DISPLAY CLASSIFICATION RESULTS ----##
     
